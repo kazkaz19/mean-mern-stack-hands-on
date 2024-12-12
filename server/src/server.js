@@ -27,7 +27,7 @@ app.use(errorHandler);
 
 // * Task 4: Continues from server/src/database/connectDB.js (B)
 app.use(express.static("../client/dist/client/browser"));
-app.length("*", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(
     path.resolve(__dirname, "../../client/dist/client/browser/index.html")
   );
